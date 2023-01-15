@@ -1,95 +1,64 @@
-# Devnology Ecommercy
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
+<p align="center">
+<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-## Objetivos do Projeto.
+## About Laravel
 
-O projeto consiste na criação de uma pequena aplicação de ecommerce, com os seguintes objetivos:
-- Listar os Produtos dos fornecedores;
-- Permitir o cliente filtrar e pesquisar os produtos especificos;
-- Adicionar os produtos no carinho de compra;
-- Guardar os produtos comprados na base de dados, bem como os dados dos clientes;
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-APis do fornecedor:
-- http://616d6bdb6dacbb001794ca17.mockapi.io/devnology/brazilian_provider
-- http://616d6bdb6dacbb001794ca17.mockapi.io/devnology/european_provider
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
+## Learning Laravel
 
-**Estruturo do Projeto:**
-- Laravel Backend;
-- React FrontEnd
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-## Backend:
-- Laravel 9
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-**Instalação:**
-npm install 
+## Laravel Sponsors
 
-**executar o projeto**
-php artisan serve
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-**Configuração do Base de Dados**
-no ficheiro **.env**, adicionar as informações do base de dados:
+### Premium Partners
 
-`
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=
-DB_USERNAME=
-DB_PASSWORD=
-`
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Cubet Techno Labs](https://cubettech.com)**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[Many](https://www.many.co.uk)**
+- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
+- **[DevSquad](https://devsquad.com)**
+- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
+- **[OP.GG](https://op.gg)**
+- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
+- **[Lendio](https://lendio.com)**
 
-**executar o comando npm install** para instalar todas as dependencias do projeto.
+## Contributing
 
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-### Funcionalidades do backend:
-**APIs:**
-- http://localhost:8000/api/v1/invoice - Metodo Post para gravar as compras dos clientes;
-![image](https://user-images.githubusercontent.com/65368848/212565232-fb2968b2-25ec-4b9e-9a52-f94b79542108.png)
+## Code of Conduct
 
-- http://localhost:8000/api/v1/category - Metodo get para Listar todas as Categorias dos Produtos;
-![image](https://user-images.githubusercontent.com/65368848/212565245-328f096f-5eda-466d-a922-33106b39a209.png)
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-- http://localhost:8000/api/auth/register - Metodo post, para fazer o registo dos clientes;
-![image](https://user-images.githubusercontent.com/65368848/212564461-3e788d60-7400-49c7-ba9e-845d44684545.png)
+## Security Vulnerabilities
 
-- http://localhost:8000/api/auth/login - Efetuar o login;
-![image](https://user-images.githubusercontent.com/65368848/212564358-925ab46c-c216-4353-bf6d-ebddc6833044.png)
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
+## License
 
-
-## FrontEnd
-- react next js
-
-** instalar projeto:
-npm install
-
-executar o projeto
-
-npm run dev
-
--- Para a criação do FrontEnd, foi adquirido o template : https://bonik-react.vercel.app/
-
-**Entretanto foi apenas adicionado as seguintes funcionalidades:**
-- Adicionar produto no carrinho;
-- Filtrar Produtos;
-- Ver produtods por Categorias;
-- Ver Perfil;
-- Ver quantidade de produtos comprados pelo Cliente e a Quantidade de Dinheiro utilizado na plataforma;
-- Comprar produtos;
-
-## Por adicionar: 
-- Adicionar alertas nas funcionalidades de compras, login, registos;
-- Apresentar todos os produtos comprados;
-- Validar o formulario de Compra;
-- etc.
-
-
-
-
-
-
-
-
-
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
